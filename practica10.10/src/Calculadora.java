@@ -15,4 +15,10 @@ public class Calculadora {
 
     }
 
+    public int multiplicar(int op1, int op2){
+        int resultado = op1* op2*;
+        return resultado;
+    }
+
+
 }

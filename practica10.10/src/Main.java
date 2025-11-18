@@ -5,6 +5,7 @@ public class Main {
         saludar("Borja");
         despedir();
         saludar( "Laura");
+        System.out.println(calculadora.multiplicar);
 
         //Operaciones
         Calculadora operacionesMatematicas = new Calculadora();
