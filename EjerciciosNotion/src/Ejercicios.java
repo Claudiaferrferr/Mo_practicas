@@ -32,12 +32,16 @@ Scanner scanner = new Scanner(System.in);
 
             if (opcion ==1) {
                 System.out.println("La opcion seleccionada es la 1");
+                break;
             }else if (opcion == 2) {
                 System.out.println("La opcion seleccionada es la 2");
+                break;
             } else if (opcion ==3) {
                 System.out.println("La opcion seleccionada es la 3");
+                break;
             } else if (opcion ==4) {
                 System.out.println("La opcion seleccionada es la 4");
+                break;
             } else if (opcion==5) {
                 System.out.println("La opcion seleccionada es la 5");
                 System.out.println("Saliendo del programa");
@@ -63,9 +67,8 @@ Scanner scanner = new Scanner(System.in);
         // Para depositar, valida que sea una cantidad positiva.
 
         double saldo = 1000;
-        int opcion;
+        int opcion = 0;;
 
-        do {
             System.out.println("Cajero automatico");
             System.out.println("1.Consultar saldo");
             System.out.println("2.Depositar dinero");
@@ -73,18 +76,40 @@ Scanner scanner = new Scanner(System.in);
             System.out.println("4. Salir");
 
             opcion = scanner.nextInt();
+
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Tu saldo es de " + saldo + " euros");
+                    break;
+                case 2:
+                    System.out.println("¿Cuanto dinero quieres depositar?");
+                    double dineroIngresado = 0;
+                    dineroIngresado = scanner.nextDouble();
+                    if (dineroIngresado<0){
+                        System.out.println("No puede introducir un saldo negativo");
+                    } else{
+                        System.out.println(" Gracias por confiar en nosotros");
+                    }
+                    break;
+                case 3:
+                    System.out.println("¿Cuanto dinero desea retirar?");
+                    double dineroRetirado = 0;
+                    dineroRetirado= scanner.nextDouble();
+                    if (dineroRetirado>1000){
+                        System.out.println("No es posible retirar esa cantidad");
+                    } else{
+                        System.out.println("Gracias por la confianza");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Saliendo");
+            }
+
         }
-
-        switch (opcion){
-            case 1:
-            case 1:
-                System.out.println("Tu sal");
-        }
-
-
 
     }
 
 
 
-}
+
