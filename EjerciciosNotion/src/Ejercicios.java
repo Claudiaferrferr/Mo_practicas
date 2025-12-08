@@ -108,7 +108,36 @@ Scanner scanner = new Scanner(System.in);
 
         }
 
+        public void arrays(){
+        int[] listaNumeros =new int[6];
+            for (int i = 0; i < listaNumeros.length; i++) {
+                listaNumeros[i] = (int)(Math.random()*60);
+                System.out.println(listaNumeros[i]);
+            }
+        int[] arrayraro = new int[]{36, 21, 21, 47, 48, 32};
+            for (int item : arrayraro){
+                System.out.println(item);
+
+                int min = arrayraro[0];
+                int max = arrayraro[0];
+
+                for (int num: arrayraro){
+                    if (num<min){
+                       min=num;
+                    } if (num>max){
+                        max=num;
+                    }
+                }
+                System.out.println("El numero menor es" +min);
+                System.out.println("El numero mayor es" +max);
+            }
+
+
+        }
+
     }
+
+
 
 
 
